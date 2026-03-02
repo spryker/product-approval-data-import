@@ -29,9 +29,6 @@ class ProductApprovalDataImportConfig extends DataImportConfig
         return $this->buildImporterConfiguration($importFile, static::IMPORT_TYPE_PRODUCT_APPROVAL_STATUS);
     }
 
-    /**
-     * @return string
-     */
     protected function getModuleRoot(): string
     {
         return (string)realpath(
@@ -43,11 +40,6 @@ class ProductApprovalDataImportConfig extends DataImportConfig
         );
     }
 
-    /**
-     * @param string $fileName
-     *
-     * @return string
-     */
     protected function getModuleDataImportDirectory(string $fileName): string
     {
         return implode(DIRECTORY_SEPARATOR, [

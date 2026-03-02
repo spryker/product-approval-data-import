@@ -58,9 +58,6 @@ class ProductAbstractApprovalStatusDataImportPluginTest extends Unit
      */
     protected $plugin;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -68,9 +65,6 @@ class ProductAbstractApprovalStatusDataImportPluginTest extends Unit
         $this->plugin = new ProductAbstractApprovalStatusDataImportPlugin();
     }
 
-    /**
-     * @return void
-     */
     public function testImportThrowsExceptionWhenProductAbstractSkuIsEmpty(): void
     {
         // Arrange
@@ -86,9 +80,6 @@ class ProductAbstractApprovalStatusDataImportPluginTest extends Unit
         $this->plugin->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testImportThrowsExceptionWhenProductAbstractIsNotFoundBySku(): void
     {
         // Arrange
@@ -145,9 +136,6 @@ class ProductAbstractApprovalStatusDataImportPluginTest extends Unit
         ];
     }
 
-    /**
-     * @return void
-     */
     public function testImportImportsData(): void
     {
         // Arrange
@@ -194,9 +182,6 @@ class ProductAbstractApprovalStatusDataImportPluginTest extends Unit
         $this->tester->assertProductApprovalStatuses($expectedDataSet);
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         // Assert

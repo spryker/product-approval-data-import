@@ -18,9 +18,6 @@ use Spryker\Zed\ProductApprovalDataImport\Business\Step\ProductAbstractApprovalS
  */
 class ProductApprovalDataImportBusinessFactory extends DataImportBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function getProductAbstractApprovalStatusDataImporter(): DataImporterInterface
     {
         $dataImporter = $this->getCsvDataImporterFromConfig(
@@ -36,17 +33,11 @@ class ProductApprovalDataImportBusinessFactory extends DataImportBusinessFactory
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createProductAbstractApprovalStatusWriterStep(): DataImportStepInterface
     {
         return new ProductAbstractApprovalStatusWriterStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createApprovalStatusValidationStep(): DataImportStepInterface
     {
         return new ApprovalStatusValidationStep();

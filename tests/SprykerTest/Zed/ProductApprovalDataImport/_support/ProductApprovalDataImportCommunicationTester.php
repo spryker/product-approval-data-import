@@ -62,11 +62,6 @@ class ProductApprovalDataImportCommunicationTester extends Actor
         self::APPROVAL_STATUS_DRAFT,
     ];
 
-    /**
-     * @param string $fileName
-     *
-     * @return \Generated\Shared\Transfer\DataImporterConfigurationTransfer
-     */
     public function createDataImporterConfigurationTransfer(string $fileName): DataImporterConfigurationTransfer
     {
         $dataImporterReaderConfigurationTransfer = (new DataImporterReaderConfigurationTransfer())
@@ -95,9 +90,6 @@ class ProductApprovalDataImportCommunicationTester extends Actor
         $this->createProductAbstractPropelQuery()->filterBySku_In($skus)->delete();
     }
 
-    /**
-     * @return \Orm\Zed\Product\Persistence\SpyProductAbstractQuery
-     */
     protected function createProductAbstractPropelQuery(): SpyProductAbstractQuery
     {
         return SpyProductAbstractQuery::create();
