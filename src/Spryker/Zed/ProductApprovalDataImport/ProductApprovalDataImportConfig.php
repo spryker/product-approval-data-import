@@ -13,6 +13,8 @@ use Spryker\Zed\DataImport\DataImportConfig;
 class ProductApprovalDataImportConfig extends DataImportConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_PRODUCT_APPROVAL_STATUS = 'product-approval-status';
